@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'abe';
+  headerTitle:string = 'Angular 6 with Bootstrap 4';
+  footerTitle:string = 'FOOTER';
 }
