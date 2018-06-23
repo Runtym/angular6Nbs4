@@ -1,3 +1,49 @@
-<p>
-  direct works!
-</p>
+<h4>ngFor of</h4>
+<ul>
+  <li *ngFor="let ani of animalList">
+    {{ani.name}},{{ani.age}}
+  </li>
+</ul>
+<h4>ngFor of with index</h4>
+<ul>
+  <li *ngFor="let ani of animalList; index as i;">
+    {{i+1}}.{{animalList[i].name}},{{animalList[i].age}}
+  </li>
+</ul>
+
+<h4>ngFor of with even</h4>
+<ul>
+  <ng-container *ngFor="let ani of animalList;even as even;">
+    <li *ngIf="even">{{ani.name}},{{ani.age}}</li>
+  </ng-container>
+</ul>
+
+<h4>ngFor of with odd</h4>
+<ul>
+    <ng-container *ngFor="let ani of animalList;odd as isOdd">
+      <li *ngIf="isOdd">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+<h4>ngFor of with first</h4>
+<ul>
+    <ng-container *ngFor="let ani of animalList;first as isFirst">
+      <li *ngIf="isFirst">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+
+<h4>ngFor of with isLast</h4>
+<ul>
+    <ng-container *ngFor="let ani of animalList;last as isLast">
+      <li *ngIf="isLast">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+
+<h4>ngFor of with serveral conditions</h4>
+<ul>
+    <ng-container *ngFor="let ani of animalList;last as isLast;first as isFirst">
+      <li *ngIf="ani.age==2 || ani.name=='고양이' || isFirst || isLast">{{ani.name}},{{ani.age}}</li>
+    </ng-container>
+</ul>
+
+{{name}}
+<input type="text" [(ngModel)]="name">

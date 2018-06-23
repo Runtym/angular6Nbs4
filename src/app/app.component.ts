@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'abe-root',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   headerTitle:string = 'Angular 6 with Bootstrap 4';
   footerTitle:string = 'FOOTER';
+
+  constructor(private router: Router){}
+  
+  movePage(me:MouseEvent):void{
+    let page = (<HTMLElement>me.target).innerText;
+    this.router.navigate([page]);
+  }
 }

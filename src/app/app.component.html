@@ -4,7 +4,7 @@
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="">Home</button>
     <button mat-menu-item routerLink="/direct">direct</button>
-    <button mat-menu-item routerLink="/event">event</button>
+    <button mat-menu-item (click)="movePage($event)">event</button>
   </mat-menu>
   <div class='container'>
       <router-outlet></router-outlet>

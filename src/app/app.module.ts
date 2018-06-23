@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,13 @@ import { EventComponent } from './event/event.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+// const appRoute : Routes = [
+//   {path:'',component:HomeComponent},
+//   {path: 'error',component: ErrorComponent},
+//   {path: 'direct',component: DirectComponent},
+//   {path: 'event',component: EventComponent},
+//   {path: '**', redirectTo: 'error'}
+// ]
 @NgModule({
   declarations: [ 
     AppComponent, HomeComponent, ErrorComponent, DirectComponent, EventComponent, HeaderComponent, FooterComponent
