@@ -15,6 +15,7 @@ import { DirectComponent } from './direct/direct.component';
 import { EventComponent } from './event/event.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserComponent } from './user/user.component';
 
 // const appRoute : Routes = [
 //   {path:'',component:HomeComponent},
@@ -25,7 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 // ]
 @NgModule({
   declarations: [ 
-    AppComponent, HomeComponent, ErrorComponent, DirectComponent, EventComponent, HeaderComponent, FooterComponent
+    AppComponent, HomeComponent, ErrorComponent, DirectComponent, EventComponent, HeaderComponent, FooterComponent, UserComponent
   ], 
   imports: [
     BrowserModule,
